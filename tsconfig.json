@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+      "target": "esnext",
+      "module": "commonjs",
+      "lib": ["es2017", "dom", "dom.iterable"],
+      "declaration": true,
+      "declarationMap": true,
+      "sourceMap": true,
+      "baseUrl": "./",
+      "outDir": "./.build",
+      "rootDir": "./",
+      "strict": true,
+      "noImplicitReturns": true,
+      "noFallthroughCasesInSwitch": true,
+      "moduleResolution": "node",
+      "allowSyntheticDefaultImports": true,
+      "experimentalDecorators": true,
+      "forceConsistentCasingInFileNames": true,
+      "strictPropertyInitialization": false,
+      "paths": {
+          "@*": [ "server/.framework/*" ]
+      }
+    }
+  }
+  
