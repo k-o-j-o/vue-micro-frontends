@@ -21,7 +21,7 @@ app.use('*', (req, res, next) => {
 
 (async function() {
     await Promise.all([
-        Controller.initAll(SERVER_STATE)
+        Controller.initControllers(SERVER_STATE)
     ]); 
 
     app.listen(PORT, () => console.log(`App is listening on port ${PORT}`));

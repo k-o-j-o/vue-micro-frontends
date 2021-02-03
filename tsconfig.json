@@ -15,10 +15,12 @@
       "moduleResolution": "node",
       "allowSyntheticDefaultImports": true,
       "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
       "forceConsistentCasingInFileNames": true,
       "strictPropertyInitialization": false,
       "paths": {
-          "@*": [ "server/.framework/*" ]
+          "@*": [ "server/.framework/*" ],
+          "~*": [ "server/*" ]
       }
     }
   }

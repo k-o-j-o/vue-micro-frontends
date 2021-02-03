@@ -15,6 +15,7 @@
     "express": "^4.17.1",
     "lodash": "^4.17.20",
     "node-persist": "^3.1.0",
+    "reflect-metadata": "^0.1.13",
     "twing": "^5.0.2",
     "vue": "^2.6.12"
   },
