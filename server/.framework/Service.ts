@@ -4,7 +4,6 @@ import { Constructor } from '@util';
 
 @Injectable()
 export class Service {
-
     public static define(options: Partial<ServiceOptions> = {}) {
         options = _populateOptions(options);
         return <S extends Constructor<Service>>(ctor: S) => {

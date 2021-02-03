@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import 'reflect-metadata';
 import { Provider } from '@Provider';
-import { AbstractConstructor, Constructor } from '@util';
+import { Constructor } from '@util';
 
 export function Injectable(options: Partial<InjectableOptions> = {}) {
     return <T extends Constructor>(ctor: T) => {

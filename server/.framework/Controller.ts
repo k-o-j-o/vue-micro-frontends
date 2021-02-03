@@ -45,13 +45,12 @@ export class Controller {
 
                 server.application.use(`/${baseRoute}`, router);
             }
-    
-        })
+        });
     }
 
     public static define(options: Partial<ControllerOptions>) {
         return <C extends Constructor<Controller>>(ctor: C) => {
-            Reflect.defineMetadata(CONTROLLER_METADATA, {}, ctor);
+            Reflect.defineMetadata(CONTROLLER_METADATA, options, ctor);
             return ctor;
         }
     }
@@ -62,10 +61,6 @@ const CONTROLLER_METADATA = Symbol('controller-metadata');
 type ControllerOptions = {
     path: string;
 }
-
-const _populateOptions = (options: Partial<ControllerOptions>) => ({
-    
-})
 
 async function pluckController<C extends Constructor<Controller>>(filePath: string): Promise<C> {
     return Object.values(await import(resolve(CONTROLLERS_PATH, filePath)))
